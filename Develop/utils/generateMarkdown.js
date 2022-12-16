@@ -16,9 +16,46 @@ function renderLicenseBadge(license) {
 // put links, badges, and sections into switch cases
 
 
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+
+function generateMarkdown(answers) {
+  return `# ${answers.title}
+
+  ## Description
+  ${answers.description}
+
+  ## License 
+
+  ${renderLicenseBadge(answers.license)}
+
+  ## Table of Contents
+
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
+  ## Installation
+
+  \`${answers.install}\`
+
+  ## Usage
+
+  ${answers.usage}
+
+  ## Tests
+
+  \`${answers.tests}\`
+
+  ## Contributing
+
+  ${answers.contribute}
+
+  ## Questions
+
+  Send me questions here: ${answers.email}.
+  See more of my work here: [Github](https://github.com/${answers.name}).
 
 `;
 }
